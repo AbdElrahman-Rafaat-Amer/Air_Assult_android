@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Air Assault</string>
+    <string name="medium_level">Medium Level</string>
+    <string name="hard_level">Hard Level</string>
+    <string name="easy_level">Easy Level</string>
+</resources>
