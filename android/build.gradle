@@ -1,5 +1,5 @@
 android {
-    namespace "com.abdelrahman.raafaat.airassult"
+    namespace "com.abdelrahman.raafaat.airassault"
     buildToolsVersion "33.0.2"
     compileSdkVersion 33
     sourceSets {
@@ -18,7 +18,7 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "com.abdelrahman.raafaat.airassult"
+        applicationId "com.abdelrahman.raafaat.airassault"
         multiDexEnabled true
         minSdkVersion 20
         targetSdkVersion 33
@@ -94,7 +94,7 @@ tasks.register('run', Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.abdelrahman.raafaat.airassult/com.abdelrahman.raafaat.airassult.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.abdelrahman.raafaat.airassault/com.abdelrahman.raafaat.airassault.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"
