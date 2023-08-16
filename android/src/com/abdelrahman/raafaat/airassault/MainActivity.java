@@ -1,16 +1,15 @@
 package com.abdelrahman.raafaat.airassault;
 
-//import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.abdelrahman.raafaat.airassault.R;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private Button easyLevelButton, mediumLevelButton, hardLevelButton;
 
