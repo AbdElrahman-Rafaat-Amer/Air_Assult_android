@@ -8,8 +8,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.abdelrahman.raafaat.airassault.databinding.ActivityGameBinding;
+import com.badlogic.gdx.backends.android.AndroidApplication;
+import com.badlogic.gdx.backends.android.AndroidFragmentApplication;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity implements AndroidFragmentApplication.Callbacks {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,11 @@ public class GameActivity extends AppCompatActivity {
         } else {
             gameFragment = (GameFragment) manager.findFragmentByTag("GAME_FRAGMENT");
         }
+
+    }
+
+    @Override
+    public void exit() {
 
     }
 }
