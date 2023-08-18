@@ -22,15 +22,11 @@ public class GameActivity extends AppCompatActivity implements AndroidFragmentAp
 
         GameFragment gameFragment;
         FragmentManager manager = getSupportFragmentManager();
-        if (savedInstanceState == null) {
-            gameFragment = new GameFragment();
-            FragmentTransaction transaction = manager.beginTransaction();
-            transaction.setReorderingAllowed(true);
-            transaction.add(R.id.fragment_container, gameFragment, "GAME_FRAGMENT");
-            transaction.commit();
-        } else {
-            gameFragment = (GameFragment) manager.findFragmentByTag("GAME_FRAGMENT");
-        }
+        gameFragment = new GameFragment();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.setReorderingAllowed(true);
+        transaction.add(R.id.fragment_container, gameFragment, "GAME_FRAGMENT");
+        transaction.commit();
 
     }
 
