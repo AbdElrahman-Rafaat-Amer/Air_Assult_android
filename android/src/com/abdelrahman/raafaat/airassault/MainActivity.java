@@ -6,24 +6,20 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.abdelrahman.raafaat.airassault.R;
+import com.abdelrahman.raafaat.airassault.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button easyLevelButton, mediumLevelButton, hardLevelButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        easyLevelButton = findViewById(R.id.easyLevelButton);
-        mediumLevelButton = findViewById(R.id.mediumLevelButton);
-        hardLevelButton = findViewById(R.id.hardLevelButton);
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        mediumLevelButton.setOnClickListener(view -> navigateToNextScreen());
-        easyLevelButton.setOnClickListener(view -> navigateToNextScreen());
-        hardLevelButton.setOnClickListener(view -> navigateToNextScreen());
+        binding.mediumLevelButton.setOnClickListener(view -> navigateToNextScreen());
+        binding.easyLevelButton.setOnClickListener(view -> navigateToNextScreen());
+        binding.hardLevelButton.setOnClickListener(view -> navigateToNextScreen());
     }
 
     private void navigateToNextScreen() {
